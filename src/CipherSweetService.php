@@ -166,7 +166,7 @@ class CipherSweetService
      */
     public function decrypt(Model $model, string $attribute, $value): ?string
     {
-        if (is_null($value)) {
+        if (is_null($value) || $value == "") {
             return null;
         }
 
